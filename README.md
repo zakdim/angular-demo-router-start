@@ -1,6 +1,6 @@
 # Angular Demo Router Start
 
-Starter Project for <a href="https://angular.ac" target="_blank">Angular Academy Workshop</a>.
+Starter Project for the Router demo of <a href="https://angular.ac" target="_blank">Angular Academy Workshop</a>.
 
 
 ## Project Setup
