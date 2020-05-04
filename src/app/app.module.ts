@@ -28,6 +28,7 @@ import { JwtModule } from '@auth0/angular-jwt';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     ProductsModule,

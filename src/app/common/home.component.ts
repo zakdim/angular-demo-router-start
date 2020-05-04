@@ -1,11 +1,19 @@
 import { Router } from '@angular/router';
-import { Component, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { fadeInAnimation } from '../animations';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     templateUrl: './home.component.html'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
         
-    constructor(private router: Router) { }
+    constructor(
+        private router: Router
+    ) { }
+
+    ngOnInit(): void {
+        
+    }
 
 }

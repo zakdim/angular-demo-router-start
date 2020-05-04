@@ -4,17 +4,18 @@ import { FavouriteService } from './../../services/favourite.service';
 import { Product } from './../product.interface';
 import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
+import { slideInOutAnimation } from 'src/app/animations';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+  styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
 
   @Input() product: Product;
   product$: Observable<Product>;
-  productSub: Subscription;
 
   @Output() favouriteAdded = new EventEmitter<Product>();
 
@@ -30,7 +31,7 @@ export class ProductDetailComponent implements OnInit {
       this.productService
           .deleteProduct(id)
           .subscribe(
-              response => {
+              () => {
                   console.log('Product deleted.');
                   this.productService.clearCache();
                   this.router.navigateByUrl("/products");

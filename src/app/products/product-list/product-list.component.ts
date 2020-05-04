@@ -5,11 +5,13 @@ import { Product } from './../product.interface';
 import { Component, OnInit, OnDestroy, ViewEncapsulation, HostBinding } from '@angular/core';
 import { Router } from "@angular/router";
 import { catchError } from 'rxjs/operators';
+import { fadeInAnimation } from 'src/app/animations';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-product-list',
     templateUrl: './product-list.component.html',
-    styleUrls: ['./product-list.component.css']
+    styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
 
