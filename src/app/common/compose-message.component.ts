@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { Router }                 from '@angular/router';
- 
+import { slideInDownAnimation } from '../animations';
+
 @Component({
   templateUrl: './compose-message.component.html',
   styles: [ ':host { position: absolute; top: 10%; right: 10%; background-color: #EDF8D3; padding: 20px; display: block }' ]

@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { fadeInAnimation } from '../animations';
 import { Title } from '@angular/platform-browser';
 
