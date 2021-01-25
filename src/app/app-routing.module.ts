@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ComposeMessageComponent, outlet: 'side' },
   { path: 'error', component: ErrorComponent },
   { path: 'products', loadChildren: () => 
                         import('./products/products.module')
@@ -26,7 +26,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { 
     relativeLinkResolution: 'legacy',
     preloadingStrategy: PreloadAllModules,
-    enableTracing: environment.production ? false : true 
+    enableTracing: environment.production ? false : true
   })],
   exports: [RouterModule],
 })
