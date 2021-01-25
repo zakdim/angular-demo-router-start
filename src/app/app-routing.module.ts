@@ -16,6 +16,9 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'error', component: ErrorComponent },
+  { path: 'products', loadChildren: () => 
+                        import('./products/products.module')
+                        .then(m => m.ProductsModule) },
   { path: '**', redirectTo:'/error?reason=NavError' }
 ];
 
