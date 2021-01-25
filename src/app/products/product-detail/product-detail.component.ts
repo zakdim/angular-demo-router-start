@@ -11,8 +11,11 @@ import { Title } from '@angular/platform-browser';
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css'],
+  animations: [slideInOutAnimation]
 })
 export class ProductDetailComponent implements OnInit {
+
+  @HostBinding('@slideInOutAnimation') animation = true;
 
   @Input() product: Product;
   product$: Observable<Product>;
