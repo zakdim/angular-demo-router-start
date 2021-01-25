@@ -12,11 +12,12 @@ export class HomeComponent implements OnInit {
     @HostBinding('@fadeInAnimation') animation = true;
 
     constructor(
-        private router: Router
+        private router: Router,
+        private titleService: Title
     ) { }
 
     ngOnInit(): void {
-        
+        this.titleService.setTitle('Home Page');
     }
 
 }

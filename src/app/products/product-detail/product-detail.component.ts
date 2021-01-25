@@ -26,7 +26,8 @@ export class ProductDetailComponent implements OnInit {
     private favouriteService: FavouriteService,
     private productService: ProductService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) { }
 
   deleteProduct(id: number) {
@@ -52,6 +53,8 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
     this.product = this.route.snapshot.data["product"];
+
+    this.titleService.setTitle('Details du produit: ' + this.product.name);
 
     // let id = this.route.snapshot.params["id"];
     // if (id) {

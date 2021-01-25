@@ -79,9 +79,12 @@ export class ProductListComponent implements OnInit {
     constructor(
         private productService: ProductService,
         private favouriteService: FavouriteService,
-        private router: Router) { }
+        private router: Router,
+        private titleService: Title) { }
 
     ngOnInit() {
+        this.titleService.setTitle('Liste des produits');
+
         this.products$ = this
             .productService
             .getProducts()
